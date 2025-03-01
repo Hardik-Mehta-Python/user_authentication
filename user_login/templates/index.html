@@ -35,11 +35,18 @@
         .auth-buttons {
             margin-left: 20px;
         }
-        .auth-buttons .btn {
+        .auth-buttons a {
             margin-left: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .auth-buttons .login {
             background: #4CAF50;
         }
-        .auth-buttons .btn.signup {
+        .auth-buttons .signup {
             background: #008CBA;
         }
         .hero {
@@ -83,8 +90,8 @@
             <a href="#">Contact</a>
         </nav>
         <div class="auth-buttons">
-            <button class="btn login">Login</button>
-            <button class="btn signup">Sign Up</button>
+            <a href="/login" class="login">Login</a>
+            <a href="/signup" class="signup">Sign Up</a>
         </div>
     </header>
     <section class="hero">
