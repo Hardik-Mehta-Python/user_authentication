@@ -9,4 +9,7 @@ class Sign_up(models.Model):
     password = models.CharField(max_length=100)
     confirm_password= models.CharField(max_length=100)
 
+    def __str__(self):
+        return f"{self.username} {self.email} {self.password}"
+
 
