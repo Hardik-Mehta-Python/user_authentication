@@ -37,11 +37,12 @@ def signup(request):
             return redirect(signup)
         data = Sign_up(name = name, username=username,email=email,Phonenumber=Phonenumber,password=password,confirm_password=confirm_password)
         data.save()
+        return redirect(login)
 
     else:
         return render(request,"signup.html")
 
 
 
-    return render(request,"signup.html")
+    # return render(request,"signup.html")
 
