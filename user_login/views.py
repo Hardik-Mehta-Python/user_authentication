@@ -4,7 +4,9 @@ from django.contrib import messages
 
 # Create your views here.
 def index(request):
+    
     return render(request,"index.html")
+    
 
 def login(request):
     if request.method == "POST":
@@ -14,7 +16,7 @@ def login(request):
                 password = request.POST['password'],
                 )
             request.session['username'] = user.username
-            return render(request, 'index.html')
+            return redirect(index)
         except:
             return render(request,"login.html")
     else:
