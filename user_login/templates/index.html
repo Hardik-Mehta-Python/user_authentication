@@ -95,9 +95,11 @@
         </div>
     </header>
     <section class="hero">
-        <h1>Welcome to Our Website   </h1>
+        {% if request.session.username %}
+        <h1>Welcome to Our Website  {{request.session.username}}  </h1>
         <p>Discover amazing things with us</p>
         <button class="btn">Get Started</button>
+        {% endif %}
     </section>
 </body>
 </html>
